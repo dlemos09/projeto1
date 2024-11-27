@@ -1,0 +1,26 @@
+<h1>Detalhes do Usuário</h1>
+<div class="detalhesUser">
+  <p><strong>Nome:</strong> {{user.name}}</p>
+  <p><strong>Ocupação:</strong> {{user.occupation}}</p>
+  <p><strong>Data de Nascimento:</strong> {{user.date_of_birth}}</p>
+  <p><strong>Newsletter:</strong> 
+    {{#if user.newsletter}}
+      Sim
+    {{else}}
+      Não
+    {{/if}}
+  </p>
+
+  <div class="address-list">
+    <h2>Lista de Endereços:</h2>
+    {{#if user.Addresses}}
+      {{#each user.Addresses}}
+        <p>{{this.street}}, {{this.number}}, {{this.city}}</p>
+      {{/each}}
+    {{else}}
+      <p>Sem endereços cadastrados.</p>
+    {{/if}}
+  </div>
+
+  <a href="/users/edituser/{{user.id}}" class="btn_editar">Editar</a>
+</div>

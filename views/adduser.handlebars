@@ -1,0 +1,27 @@
+<h1>Cadastre um Usuário</h1>
+
+<div class="form_container">
+
+    <form action="/users/create" method="POST" class="form adduser">
+        <div class="form_control">
+            <label for="name">Nome: </label>
+            <input type="text" name="name" placeholder="Digite o nome do usuário" required autofocus>
+        </div>
+        <div class="form_control">
+            <label for="occupation">Profissão: </label>
+            <input type="text" name="occupation" placeholder="Digite a profissão do usuário" required>
+        </div>
+        <div class="form-control">
+            <label for="date_of_birth">Data de Nascimento: </label>
+            <input type="date" name="date_of_birth" required>
+        </div>
+        <div class="form-control form-checkbox">
+            <input type="checkbox" name="newsletter" checked>
+            <label for="newsletter:">Enviar promoções? </label>
+        </div>
+        <div class="form-btn">
+            <input type="submit" value="Cadastrar">
+        </div>
+
+    </form>
+</div>
